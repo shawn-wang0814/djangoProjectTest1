@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加书籍</title>
+</head>
+<body>
+    <form method="post" action="/create_book">
+        名称：<input type="text" name="bname">
+        出版日期:<input type="date" name="bpub_date">
+        阅读人数:<input type="text" name="read">
+        简介:<input type="text" name="comment">
+        <input type="submit" value="提交">
+        {% csrf_token %}
+    </form>
+
+</body>
+</html>

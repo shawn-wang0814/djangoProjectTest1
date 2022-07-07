@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图书信息</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>编号</td>
+            <td>书名</td>
+            <td>出版日期</td>
+            <td>操作</td>
+        </tr>
+        {% for book in books %}
+            <tr>
+                <td>{{ book.id }}</td>
+                <td><a href="/books/{{ book.id }}">{{ book.btitle }}</a>
+                    </td>
+                <td>{{ book.bpub_date }}</td>
+                <td><a href="/delete/{{ book.id }}">删除</a> </td>
+                <td><a href="/create">添加</a> </td>
+            </tr>
+
+        {% endfor %}
+    </table>
+</body>
+</html>

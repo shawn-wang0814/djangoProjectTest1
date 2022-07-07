@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>人物</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>编号</td>
+            <td>人物名称</td>
+            <td>性别</td>
+            <td>技能</td>
+        </tr>
+        {% for hero in heroes %}
+            <tr>
+                <td>{{ hero.id }}</td>
+                <td>{{ hero.hname }}</td>
+
+                    {% if hero.hgender == True %}
+                        <td>男</td>
+                     {% else %}
+                        <td>女</td>
+                    {% endif %}
+
+                <td>{{ hero.hcomment}}</td>
+            </tr>
+
+        {% endfor %}
+    </table>
+</body>
+</html>
